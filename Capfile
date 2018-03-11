@@ -18,7 +18,7 @@ require 'capistrano/passenger'
 require 'capistrano/rbenv'
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.5.0p0'
+set :rbenv_ruby, '2.5.0'
 
 
 require "capistrano/scm/git"
