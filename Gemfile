@@ -53,3 +53,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'materialize-sass', '~> 0.100.2'
 gem 'material_icons'
+
+group :development do
+  gem 'capistrano', '~> 3.10', '>= 3.10.1'
+  gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
+end
