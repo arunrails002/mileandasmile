@@ -10,9 +10,14 @@
   </head>
 
   <body>
-     <%= render 'layouts/navbar' %> 
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <div class="row">
+        <div class = "s12 l12 m12">
+          <%= render 'layouts/navbar' %> 
+          <%= yield %>
+          <%= render 'layouts/footer' %>
+        </div>
+    </div>
+    
     <script>
   $(".button-collapse").sideNav();
   $(document).ready(function(){
