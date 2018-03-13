@@ -11,18 +11,61 @@
 
   <body>
     <div class="row">
-        <div class = "s12 l12 m12">
-          <%= render 'layouts/navbar' %> 
-        </div>
-    <div>
+        <nav>
+          <div class="nav-wrapper z-depth-4 purple lighten-1">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Home</a></li>
+                <li><a href="badges.html">Packages</a></li>
+                <li><a href="collapsible.html">Trips and Testimonals</a></li>
+                <li><a href="mobile.html">Other Services</a></li>
+                <li><a href="mobile.html">Blogs</a></li>
+                <li><a href="mobile.html">Contact Us</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html">Home</a></li>
+                <li><a href="badges.html">Packages</a></li>
+                <li><a href="collapsible.html">Trips and Testimonals</a></li>
+                <li><a href="mobile.html">Other Services</a></li>
+                <li><a href="mobile.html">Blogs</a></li>
+                <li><a href="mobile.html">Contact Us</a></li>
+              </ul>
+          </div>
+        </nav> 
+    </div>
         <%= yield %>
     <div class="row">
-        <div class = "s12 l12 m12">
-          <%= render 'layouts/footer' %> 
-        </div>
-    <div>
+      <footer class="page-footer purple darken-1">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">24x7 Service & Support</h5>
+                <p class="grey-text text-lighten-4">To help you in this challenging task, Amadeus gives you access to a vast and diverse world of global, regional and local travel content covering both business and leisure travel needs with the detailed information about the content that is being booked.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Aboutus</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contactus</a></li>
+                </ul>
+              </div>
+          </div>
+<!--           <div class="footer-copyright">
+            <div class="container">
+            <a class="grey-text text-lighten-4 left" href="#arunjp.com">© 2014 Powered by jpcoderesearch</a>
+            </div>
+          </div> -->
+        </footer>
+    </div>
     
-    <script>
+  <script>
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+  $('.carousel.carousel-slider').carousel({fullWidth: true});
   $(".button-collapse").sideNav();
   $(document).ready(function(){
       $('.carousel').carousel();
@@ -38,9 +81,8 @@
   });
        
   $('.carousel.carousel-slider').carousel({fullWidth: true});
-  Materialize.toast('Welcome to Mileandasmile', 4000)
-  // Materialize.toast('E Learning!', 5000)
-  // Materialize.toast('Digital publishing!', 6000)
+  Materialize.toast('Welcome to Mille and a Smile!', 4000)
+  Materialize.toast('Travels!', 5000)
   </script>
   </body>
 </html>
