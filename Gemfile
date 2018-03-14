@@ -59,3 +59,4 @@ group :development do
   gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
 end
+gem "paperclip", "~> 5.2.1"
