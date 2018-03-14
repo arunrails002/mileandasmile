@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Days: 1
+  Nights: 1
+  Amount: 9.99
+
+two:
+  Name: MyString
+  Days: 1
+  Nights: 1
+  Amount: 9.99
