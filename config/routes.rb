@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'services' => "services#index"
+  get 'trips' => "trips#index"
+  resources :contact_us
+  resources :blogs
+  # get 'others/index'
+  get 'others' => "others#index"
+
   resources :packages
   root 'welcome#index'
 
