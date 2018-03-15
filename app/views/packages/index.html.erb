@@ -19,19 +19,23 @@
     <div class ="row">
     <% @packages.each do |package| %>
         
-          <div class="card col s12 l3 m12">
-              <div class="card-image waves-effect waves-block waves-light">
-                <div class="activator"><%= image_tag package.image.url %></div>
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><%= package.name %><i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><%= package.name %><i class="material-icons right">close</i></span>
-                <%= package.description %>
-              </div>
+        <div class="col s12 m7 l3">
+          <div class="card">
+            <div class="card-image thumb">
+              <%= image_tag package.image.url %>
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <%= link_to 'Show', package %>
+              <%= link_to 'Edit', edit_package_path(package) %>
+              <%= link_to 'Destroy', package, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
           </div>
+        </div>
 
     <% end %>
             </div>
