@@ -1,0 +1,176 @@
+<%= form_for(boarding_form) do |f| %>
+  <% if boarding_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(boarding_form.errors.count, "error") %> prohibited this boarding_form from being saved:</h2>
+
+      <ul>
+      <% boarding_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="type">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Type</span>
+                  <%= f.text_field :type %>
+                  <div class="typebut">
+                      <div class="card-action">
+                      <a>Go</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+ <div class="spot">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Spot</span>            
+                  <%= f.text_field :spot %>
+                      <div class="spotbut">
+                        <div class="card-action">
+                        <a>Go</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+<div class="services">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">   
+              <span class="card-title">Services</span>         
+                  <%= f.text_field :services %>
+                      <div class="servicesbut">
+                      <div class="card-action">
+                        <a>Go</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+<div class="traveldate">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Traveldate</span> 
+                  <%= f.date_select :traveldate %>
+                      <div class="travelbut">
+                      <div class="card-action">
+                        <a>Go</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+ <div class="numberofnights">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">
+             <span class="card-title">Numberofnights</span> 
+                  <%= f.number_field :numberofnights %>
+                      <div class="numberofnightsbut">
+                      <div class="card-action">
+                        <a>Go</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+ <div class="mobile">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">
+             <span class="card-title">Mobile</span> 
+                  <%= f.number_field :mobile %>
+                      <div class="mobilebut">
+                      <div class="card-action">
+                        <a>Go</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+<div class="email">
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card purple darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Email</span> 
+                  <%= f.text_field :email %>
+                      <div class="emailbut">
+                      <button>
+                        <a><%= f.submit %></a>
+                      </button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+</div>
+<% end %>
+<script>
+$(document).ready(function(){
+// $(".type").hide();
+$(".spot").hide();
+$(".services").hide();
+$(".traveldate").hide();
+$(".numberofnights").hide();
+$(".mobile").hide();
+$(".email").hide();
+$(".submit").hide();
+    $(".typebut").click(function(){
+        $(".spot").show();
+        $(".type").hide();
+    });
+    $(".spotbut").click(function(){
+        $(".services").show();
+        $(".spot").hide();
+    });
+    $(".servicesbut").click(function(){
+        $(".traveldate").show();
+        $(".services").hide();
+    });
+    $(".travelbut").click(function(){
+        $(".numberofnights").show();
+        $(".traveldate").hide();
+    });
+    $(".numberofnightsbut").click(function(){
+        $(".mobile").show();
+        $(".numberofnights").hide();
+    });
+    $(".mobilebut").click(function(){
+        $(".email").show();
+        $(".mobile").hide();
+    });
+    $(".emailbut").click(function(){
+        $(".submit").show();
+        $(".email").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>

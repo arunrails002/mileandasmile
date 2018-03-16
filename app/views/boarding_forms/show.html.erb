@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @boarding_form.type %>
+</p>
+
+<p>
+  <strong>Spot:</strong>
+  <%= @boarding_form.spot %>
+</p>
+
+<p>
+  <strong>Services:</strong>
+  <%= @boarding_form.services %>
+</p>
+
+<p>
+  <strong>Traveldate:</strong>
+  <%= @boarding_form.traveldate %>
+</p>
+
+<p>
+  <strong>Numberofnights:</strong>
+  <%= @boarding_form.numberofnights %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @boarding_form.mobile %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @boarding_form.email %>
+</p>
+
+<%= link_to 'Edit', edit_boarding_form_path(@boarding_form) %> |
+<%= link_to 'Back', boarding_forms_path %>

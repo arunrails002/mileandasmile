@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Boarding Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Spot</th>
+      <th>Services</th>
+      <th>Traveldate</th>
+      <th>Numberofnights</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boarding_forms.each do |boarding_form| %>
+      <tr>
+        <td><%= boarding_form.type %></td>
+        <td><%= boarding_form.spot %></td>
+        <td><%= boarding_form.services %></td>
+        <td><%= boarding_form.traveldate %></td>
+        <td><%= boarding_form.numberofnights %></td>
+        <td><%= boarding_form.mobile %></td>
+        <td><%= boarding_form.email %></td>
+        <td><%= link_to 'Show', boarding_form %></td>
+        <td><%= link_to 'Edit', edit_boarding_form_path(boarding_form) %></td>
+        <td><%= link_to 'Destroy', boarding_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boarding Form', new_boarding_form_path %>

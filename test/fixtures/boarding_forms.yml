@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  spot: MyString
+  services: MyString
+  traveldate: 2018-03-15
+  numberofnights: 1
+  mobile: 1
+  email: MyString
+
+two:
+  type: 
+  spot: MyString
+  services: MyString
+  traveldate: 2018-03-15
+  numberofnights: 1
+  mobile: 1
+  email: MyString

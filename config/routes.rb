@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :boarding_forms
   get 'services' => "services#index"
   get 'trips' => "trips#index"
   resources :contact_us

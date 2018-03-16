@@ -1,0 +1,2 @@
+class BoardingForm < ApplicationRecord
+end
