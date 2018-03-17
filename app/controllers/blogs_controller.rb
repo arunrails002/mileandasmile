@@ -1,9 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_filter :disable_nav, only: [:index]
 
   # GET /blogs
   # GET /blogs.json
   def index
+    @disable_nav = true
     @blogs = Blog.all
   end
 
