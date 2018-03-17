@@ -1,9 +1,12 @@
 class PackagesController < ApplicationController
   before_action :set_package, only: [:show, :edit, :update, :destroy]
+  before_filter :disable_nav, only: [:index]
+
 
   # GET /packages
   # GET /packages.json
   def index
+    @disable_nav = true
     @packages = Package.all
   end
 

@@ -1,9 +1,11 @@
 class ContactUsController < ApplicationController
   before_action :set_contact_u, only: [:show, :edit, :update, :destroy]
+  before_filter :disable_nav, only: [:index]
 
   # GET /contact_us
   # GET /contact_us.json
   def index
+    @disable_nav = true
     @contact_us = ContactU.all
   end
 
