@@ -7,13 +7,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    .slide_1{
+    width:100%;
+    height:100%;
+    background:#5100D5;
+    }
+    .logo_index{
+    z-index: 1;
+    }
+    </style>
   </head>
 
   <body>
-
       <nav>
-        <div class="nav-wrapper  indigo darken-1">
-          <a href="#!" class="brand-logo"><img src="assets/materialize-logo.png"></a>
+        <div class="nav-wrapper slide_1 ">
+          <a class="brand-logo logo_index"><img src="assets/mile/small_logo.png"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
@@ -37,20 +46,13 @@
 
         <%= yield %>
     <div class="row">
-      <footer class="page-footer purple darken-1">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">24x7 Service & Support</h5>
-                <p class="grey-text text-lighten-4">To help you in this challenging task, Amadeus gives you access to a vast and diverse world of global, regional and local travel content covering both business and leisure travel needs with the detailed information about the content that is being booked.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Aboutus</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Contactus</a></li>
-                </ul>
+      <div class="card">
+      <footer class="slide_1">
+          <div class="row">
+              <div class="col s12 offset-l5">
+                <img src="assets/facebook.png">
+                <img src="assets/twitter.png">
+                <img src="assets/instagram.png">
               </div>
           </div>
 <!--           <div class="footer-copyright">
@@ -59,6 +61,7 @@
             </div>
           </div> -->
         </footer>
+      </div>
     </div>
     
   <script>
@@ -89,6 +92,6 @@
       $('.parallax').parallax();
     });
   </script>
-  
+
   </body>
 </html>
