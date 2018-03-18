@@ -1,25 +1,22 @@
-<div class="row">
-        <div class="col s12 m6 l6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-          </div>
-        </div>
-</div>
-</div>
-<div class="row">
-        <div class="col s12 m6 l6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-          </div>
-        </div>
-</div>
-</div>
+<style>
+.btn:hover, .btn-large:hover {
+    background-color: #ff9c1a;
+}
+.btn:hover, .btn-large:hover, .btn-floating:hover {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+</style>
+<button class="btn btn-title-text waves-effect waves-light" id="msg">Try Me!</button>
+<div class="msg">
+  </div>
 
 
-  <script>
-$(document).ready(function(){
-$(".second").hide();
-$(".third").hide();
-$(".fourth").hide();
-});
+<p>Click the button to display an alert box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    swal("Here's a message!", "It's pretty, isn't it?")
+}
 </script>
