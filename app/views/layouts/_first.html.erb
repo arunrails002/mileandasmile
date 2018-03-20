@@ -17,7 +17,123 @@
               </p>
             </div>
             <div class="card-action border-none">
-            <a href="/" target="_blanck" class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large">Go</a>
+              <div class="type">
+                <div class="row">
+                        <div class="col s12 m6">
+                          <div class="card purple darken-3">
+                            <div class="card-content white-text">
+                              <span class="card-title">Type</span>
+                                  <input type="text" placeholder="Email" id="text_type">
+                                  <div class="typebut">
+                                      <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_type">Go</a>
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+              <div class="spot">
+              <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card purple darken-3">
+                          <div class="card-content white-text">
+                            <span class="card-title">Spot</span>            
+                                 <input type="text" placeholder="Spot" id="text_spot">
+                                    <div class="spotbut">
+                                      <div class="card-action">
+                                      <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_spot">Go</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="services">
+              <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card purple darken-3">
+                          <div class="card-content white-text">   
+                            <span class="card-title">Services</span>         
+                                <input type="text" placeholder="Services" id="text_services">
+                                    <div class="servicesbut">
+                                    <div class="card-action">
+                                      <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_services">Go</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="traveldate">
+              <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card purple darken-3">
+                          <div class="card-content white-text">
+                            <span class="card-title">Traveldate</span> 
+                                <input type="text" placeholder="Traveldate" id="text_td">
+                                    <div class="travelbut">
+                                    <div class="card-action">
+                                      <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_td">Go</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+               <div class="numberofnights">
+              <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card purple darken-3">
+                          <div class="card-content white-text">
+                           <span class="card-title">Numberofnights</span> 
+                                <input type="text" placeholder="Numberofnights" id="text_non">
+                                    <div class="numberofnightsbut">
+                                    <div class="card-action">
+                                      <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_non">Go</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+               <div class="mobile">
+              <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card purple darken-3">
+                          <div class="card-content white-text">
+                           <span class="card-title">Mobile</span> 
+                                <input type="text" placeholder="Mobile" id="text_mobile">
+                                    <div class="mobilebut">
+                                    <div class="card-action">
+                                      <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_mobile">Go</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="email">
+              <div class="row">
+                      <div class="col s12 m6">
+                        <div class="card purple darken-3">
+                          <div class="card-content white-text">
+                            <span class="card-title">Email</span> 
+                                 <input type="text" placeholder="Email" id="text_email">
+                                    <div class="emailbut">
+                                      <button>
+                                        <a class="btn waves-effect waves-light gradient-45deg-red-pink z-depth-5 btn-large" id="text_value_email">Go</a>
+                                      </button>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
             </div>
           </div>
         </div>
@@ -25,3 +141,127 @@
     </div>
     </div>
   </div>
+<script>
+$(document).ready(function(){
+// $(".type").hide();
+$(".spot").hide();
+$(".services").hide();
+$(".traveldate").hide();
+$(".numberofnights").hide();
+$(".mobile").hide();
+$(".email").hide();
+$(".submit").hide();
+    $(".typebut").click(function(){
+        $(".spot").show();
+        $(".type").hide();
+    });
+    $(".spotbut").click(function(){
+        $(".services").show();
+        $(".spot").hide();
+    });
+    $(".servicesbut").click(function(){
+        $(".traveldate").show();
+        $(".services").hide();
+    });
+    $(".travelbut").click(function(){
+        $(".numberofnights").show();
+        $(".traveldate").hide();
+    });
+    $(".numberofnightsbut").click(function(){
+        $(".mobile").show();
+        $(".numberofnights").hide();
+    });
+    $(".mobilebut").click(function(){
+        $(".email").show();
+        $(".mobile").hide();
+    });
+    $(".emailbut").click(function(){
+        $(".submit").show();
+        $(".email").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+
+  $(document).ready(function() {
+  // Function to get input value.
+  $('#text_value_type').click(function() {
+  var text_value_type = $("#text_type").val();
+  if(text_value_type=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_type);
+  }
+  });
+  $('#text_value_spot').click(function() {
+  var text_value_spot = $("#text_spot").val();
+  if(text_value_spot=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_spot);
+  }
+  });
+  $('#text_value_services').click(function() {
+  var text_value_services = $("#text_services").val();
+  if(text_value_services=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_services);
+  }
+  });
+  $('#text_value_td').click(function() {
+  var text_value_td = $("#text_td").val();
+  if(text_value_td=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_td);
+  }
+  });
+  $('#text_value_non').click(function() {
+  var text_value_non = $("#text_non").val();
+  if(text_value_non=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_non);
+  }
+  });
+  $('#text_value_mobile').click(function() {
+  var text_value_mobile = $("#text_mobile").val();
+  if(text_value_mobile=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_mobile);
+  }
+  });
+  $('#text_value_email').click(function() {
+  var text_value_email = $("#text_email").val();
+  if(text_value_email=='') {
+  alert("Enter Some Text In Input Field");
+  }else{
+  alert(text_value_email);
+  }
+  });
+
+    $("button").click(function(){
+      alert(text_value_type);
+        $.post("/boarding_forms",
+        {
+          "params[type]": text_value_type,
+          "params[type]": text_value_spot,
+          "params[type]": text_value_services,
+          "params[type]": text_value_td,
+          "params[type]": text_value_non,
+          "params[type]": text_mobile,
+          "params[type]": text_value_email,
+        },
+        function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+
+
+  });
+</script>
+
+
