@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :mile_services
   resources :boarding_forms
   get 'services' => "services#index"
   get 'trips' => "trips#index"

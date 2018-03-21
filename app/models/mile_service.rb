@@ -1,0 +1,2 @@
+class MileService < ApplicationRecord
+end
