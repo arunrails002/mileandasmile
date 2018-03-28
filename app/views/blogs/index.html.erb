@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Blogs</h1>
-<%= render 'blogs' %>
+
 <table>
   <thead>
     <tr>
@@ -15,18 +15,29 @@
   </thead>
 
   <tbody>
+    <div class= "row">
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.name %></td>
-        <td><%= blog.owner %></td>
-        <td><%= blog.user_id %></td>
-        <td><%= blog.description %></td>
-        <td><%= blog.image %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+      <div class="col s12 m6 l6">
+        <div class="card">
+          <div class="card-image">
+            <%= image_tag blog.image.url %>
+            <span class="card-title"><%= blog.name %></span>
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <p><%= blog.description %></p>
+          </div>
+          <div class="card-action">
+          <%= link_to 'Show', blog %>
+          <%= link_to 'Edit', edit_blog_path(blog) %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
+
     <% end %>
+  </div>
   </tbody>
 </table>
 
