@@ -13,10 +13,12 @@ class PackagesController < ApplicationController
   # GET /packages/1
   # GET /packages/1.json
   def show
+    @disable_nav = true
   end
 
   # GET /packages/new
   def new
+    @disable_nav = true
     @package = Package.new
   end
 
@@ -72,6 +74,7 @@ class PackagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def package_params
-      params.require(:package).permit(:name, :days, :nights, :amount, :description, :image)
+      params.require(:package).permit(:name, :days, :nights, :amount, :description, :image,
+        :Day1, :Day2, :Day3, :Day4, :Day5, :Day6, :Day7)
     end
 end

@@ -12,10 +12,12 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @disable_nav = true
   end
 
   # GET /blogs/new
   def new
+    @disable_nav = true
     @blog = Blog.new
   end
 

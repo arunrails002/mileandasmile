@@ -1,35 +1,87 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @package.name %>
-</p>
-
-<p>
-  <strong>Days:</strong>
-  <%= @package.days %>
-</p>
-
-<p>
-  <strong>Nights:</strong>
-  <%= @package.nights %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @package.amount %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @package.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @package.image.url %>
-</p>
-
-
-<%= link_to 'Edit', edit_package_path(@package) %> |
+<div class="row">
+    <div class="col s12 m7 l6">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag @package.image.url %>
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p><%= @package.description %></p>
+        </div>
+      </div>
+    </div>
+      <div class="col s12 m7 l6">
+        <ul class="collection">
+<!--           <li class="collection-item avatar">
+            <img src="images/yuna.jpg" alt="" class="circle">
+            <span class="title">Title</span>
+            <p><%= @package.name %></p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li> -->
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Title</span>
+            <p><%= @package.name %></p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">folder</i>
+            <span class="title">Nights</span>
+            <p><%= @package.nights %></p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+            <span class="title">Price</span>
+            <p><%= @package.amount %></p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+        </ul>
+      </div>
+  </div>
+<div class="row">
+  <div class="col s12 m7 l6">
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title">Things to Do</span>
+      <p><%= @package.Day4 %></p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title">Foods to try</span>
+      <p><%= @package.Day5 %></p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">play_arrow</i>
+      <span class="title">Things to Buy</span>
+      <p><%= @package.Day6 %></p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
+  </div>
+<div class="">
+    <div class="col s12 m7 l6">
+    <ul class="collapsible popout">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>How to reach?</div>
+          <div class="collapsible-body"><span><%= @package.Day1 %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Best time to Visit</div>
+          <div class="collapsible-body"><span><%= @package.Day2 %></span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Must see spots</div>
+          <div class="collapsible-body"><span><%= @package.Day3 %></span></div>
+        </li>
+      </ul>
+  </div>
+  </div>
+</div>
+<!-- 
+<%= link_to 'Edit', edit_package_path(@package) %> | -->
 <%= link_to 'Back', packages_path %>

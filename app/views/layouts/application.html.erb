@@ -21,15 +21,15 @@
   <body>
       <nav>
         <div class="nav-wrapper slide_1 ">
-          <a class="brand-logo logo_index" href="/"><img src="assets/top_left_logo.png"></a>
+          <a class="brand-logo logo_index" href="/"><%= image_tag("top_left_logo.png") %></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
-                <li><a href="packages">Packages</a></li>
-                <li><a href="trips">Trips and Testimonals</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="blogs">Blogs</a></li>
-                <li><a href="contact_us">Contact Us</a></li>
+                <li><%= link_to "Packages", packages_path %></li>
+                <li><%= link_to "Trips and Testimonals", trips_path %></li>
+                <li><%= link_to "Services", services_path %></li>
+                <li><%= link_to "Blogs", blogs_path %></li>
+                <li><%= link_to "Contact Us", contact_us_path %></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="/">Home</a></li>
@@ -50,11 +50,11 @@
           <footer class="slide_1">
               <div class="row" style = "margin-bottom: 0px;">
                   <div class="col s12 offset-l5">
-                    <a href="facebook.com"><img src="assets/64_facebook.png"></a>
-                    <a href="twitter.com"><img src="assets/64_twitter.png"></a>
-                    <a href="instagram.com"><img src="assets/64_insta.png"></a>
+                    <a href="facebook.com"><%= image_tag("64_facebook.png") %></a>
+                    <a href="twitter.com"><%= image_tag("64_twitter.png") %></a>
+                    <a href="instagram.com"><%= image_tag("64_insta.png") %></a>
                   </div>
-              </div>
+              </div> 
     <!--           <div class="footer-copyright">
                 <div class="container">
                 <a class="grey-text text-lighten-4 left" href="#arunjp.com">© 2014 Powered by jpcoderesearch</a>
