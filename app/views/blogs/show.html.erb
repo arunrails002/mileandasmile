@@ -1,29 +1,27 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+<div class="row">
+<div class="col s12 m7 l12">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag @blog.image.url %>
+          <span class="card-title"><%= @blog.name %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div class="row">
+    <div class="col s12 m6 l12">
+      <div class="card white darken-1">
+        <div class="card-content black-text">
+          <span class="card-title"><%= @blog.name %></span>
+         <%= @blog.description %>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @blog.name %>
-</p>
-
-<p>
-  <strong>Owner:</strong>
-  <%= @blog.owner %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @blog.user_id %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @blog.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-   <%= image_tag @blog.image.url %>
-</p>
+  </div>
+</div>
 <!-- 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %> -->
