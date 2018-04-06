@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
     <div class="col s12 m7 l6">
-      <div class="card">
+      <div class="card z-depth-5">
         <div class="card-image">
           <%= image_tag @package.image.url %>
-          <span class="card-title">Card Title</span>
+          <span class="card-title"><%= @package.name %></span>
         </div>
         <div class="card-content">
-          <p><%= @package.description %></p>
+          <p style="color:black;font-weight: 900;"><%= @package.description %></p>
         </div>
       </div>
     </div>
       <div class="col s12 m7 l6">
-        <ul class="collection">
+        <ul class="collection z-depth-5">
 <!--           <li class="collection-item avatar">
             <img src="images/yuna.jpg" alt="" class="circle">
             <span class="title">Title</span>
@@ -20,21 +20,21 @@
             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
           </li> -->
           <li class="collection-item avatar">
-            <i class="material-icons circle red">play_arrow</i>
-            <span class="title">Title</span>
-            <p><%= @package.name %></p>
+            <i class="material-icons circle red">vpn_key</i>
+            <span class="title" style="color:black;font-weight: 900;font-variant:small-caps;">Title</span>
+            <p style="color:black;font-weight: 500;"><%= @package.name %></p>
             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle">folder</i>
-            <span class="title">Nights</span>
-            <p><%= @package.nights %></p>
+            <i class="material-icons circle">airline_seat_flat</i>
+            <span class="title" style="color:black;font-weight: 900;font-variant:small-caps;">Nights</span>
+            <p style="color:black;font-weight: 500;"><%= @package.nights %></p>
             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
           </li>
           <li class="collection-item avatar">
-            <i class="material-icons circle green">insert_chart</i>
-            <span class="title">Price</span>
-            <p><%= @package.amount %></p>
+            <i class="material-icons circle green">attach_money</i>
+            <span class="title" style="color:black;font-weight: 900;font-variant:small-caps;">Price</span>
+            <p style="color:black;font-weight: 500;"><%= @package.amount %></p>
             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
           </li>
         </ul>
@@ -42,40 +42,40 @@
   </div>
 <div class="row">
   <div class="col s12 m7 l6">
-  <ul class="collection">
+  <ul class="collection z-depth-5">
     <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
-      <span class="title">Things to Do</span>
-      <p><%= @package.Day4 %></p>
+      <i class="material-icons circle">more</i>
+      <span class="title" style="color:black;font-weight: 900;font-variant:small-caps;">Things to Do</span>
+      <p style="color:black;font-weight: 600;"><%= @package.Day4 %></p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
-      <i class="material-icons circle green">insert_chart</i>
-      <span class="title">Foods to try</span>
-      <p><%= @package.Day5 %></p>
+      <i class="material-icons circle green">local_dining</i>
+      <span class="title" style="color:black;font-weight: 900;font-variant:small-caps;">Foods to try</span>
+      <p style="color:black;font-weight: 600;"><%= @package.Day5 %></p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Things to Buy</span>
-      <p><%= @package.Day6 %></p>
+      <i class="material-icons circle red">local_grocery_store</i>
+      <span class="title" style="color:black;font-weight: 900;font-variant:small-caps;">Things to Buy</span>
+      <p style="color:black;font-weight: 600;"><%= @package.Day6 %></p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
   </ul>
   </div>
     <div class="col s12 m7 l6">
-    <ul class="collapsible popout">
+    <ul class="collapsible popout ">
         <li>
-          <div class="collapsible-header"><i class="material-icons">filter_drama</i>How to reach?</div>
-          <div class="collapsible-body"><span><%= @package.Day1 %></span></div>
+          <div class="collapsible-header"><i class="material-icons">directions_run</i><span style="color:black;font-weight: 900;font-variant:small-caps;">How to reach?</span></div>
+          <div class="collapsible-body"><span style="color:black;font-weight: 900;"><%= @package.Day1 %></span></div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">place</i>Best time to Visit</div>
-          <div class="collapsible-body"><span><%= @package.Day2 %></span></div>
+          <div class="collapsible-header"><i class="material-icons">extension</i><span style="color:black;font-weight: 900;font-variant:small-caps;">Best time to Visit</span></div>
+          <div class="collapsible-body"><span style="color:black;font-weight: 900;"><%= @package.Day2 %></span></div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">whatshot</i>Must see spots</div>
-          <div class="collapsible-body"><span><%= @package.Day3 %></span></div>
+          <div class="collapsible-header"><i class="material-icons">gavel</i><span style="color:black;font-weight: 900;font-variant:small-caps;">Must see spots</span></div>
+          <div class="collapsible-body"><span style="color:black;font-weight: 900;"><%= @package.Day3 %></span></div>
         </li>
       </ul>
   </div>

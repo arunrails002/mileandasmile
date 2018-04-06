@@ -20,14 +20,13 @@
     <% @packages.each do |package| %>
         
         <div class="col s12 m7 l4">
-          <div class="card">
+          <div class="card z-depth-4">
             <div class="card-image thumb">
               <%= image_tag package.image.url %>
-              <span class="card-title">Card Title</span>
+              <span class="card-title"><%= package.name %></span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p style="color:black;font-weight: 900;font-variant:small-caps;" ><%= package.description %></p>
             </div>
             <div class="card-action">
               <%= link_to 'Show', package %>
