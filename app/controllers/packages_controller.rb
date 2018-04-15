@@ -75,6 +75,6 @@ class PackagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def package_params
       params.require(:package).permit(:name, :days, :nights, :amount, :description, :image,
-        :Day1, :Day2, :Day3, :Day4, :Day5, :Day6, :Day7)
+        :Day1, :Day2, :Day3, :Day4, :Day5, :Day6, :Day7, :image_1, :image_2)
     end
 end

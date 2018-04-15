@@ -1,14 +1,30 @@
+
 <p id="notice"><%= notice %></p>
 <div class="row">
     <div class="col s12 m7 l6">
       <div class="card z-depth-5">
-        <div class="card-image">
+<!--         <div class="card-image">
           <%= image_tag @package.image.url %>
           <span class="card-title"><%= @package.name %></span>
         </div>
         <div class="card-content">
           <p style="color:black;font-weight: 900;"><%= @package.description %></p>
+        </div> -->
+      <div class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+          <!-- <a class="btn waves-effect purple grey-text darken-text-2">button</a> -->
         </div>
+        <div class="carousel-item  red-text" href="#one!">
+          <%= image_tag @package.image.url %>
+        </div>
+        <div class="carousel-item  red-text" href="#two!">
+          <%= image_tag @package.image_1.url %>
+        </div>
+        <div class="carousel-item  red-text" href="#three!">
+         <%= image_tag @package.image_2.url %>
+        </div>
+      </div>
+
       </div>
     </div>
       <div class="col s12 m7 l6">
@@ -83,3 +99,14 @@
 <!-- 
 <%= link_to 'Edit', edit_package_path(@package) %> | -->
 <%= link_to 'Back', packages_path %>
+<script>
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+autoplay()   
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}
+</script>
