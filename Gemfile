@@ -63,3 +63,4 @@ end
 gem "paperclip", "~> 5.2.1"
 gem 'devise'
 gem 'rails_admin', '~> 1.3'
+gem 'omniauth-facebook'

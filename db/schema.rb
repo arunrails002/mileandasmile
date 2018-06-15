@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328173657) do
+ActiveRecord::Schema.define(version: 20180507165234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180328173657) do
   end
 
   create_table "boarding_forms", force: :cascade do |t|
-    t.string   "type"
+    t.string   "type_value"
     t.string   "spot"
     t.string   "services"
     t.date     "traveldate"
@@ -51,6 +51,32 @@ ActiveRecord::Schema.define(version: 20180328173657) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "extras", force: :cascade do |t|
+    t.text     "mission"
+    t.text     "vision"
+    t.text     "ourteam"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "main_sliders", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image_1_file_name"
+    t.string   "image_1_content_type"
+    t.integer  "image_1_file_size"
+    t.datetime "image_1_updated_at"
+    t.string   "image_2_file_name"
+    t.string   "image_2_content_type"
+    t.integer  "image_2_file_size"
+    t.datetime "image_2_updated_at"
+  end
+
   create_table "mile_services", force: :cascade do |t|
     t.string   "name"
     t.string   "image"
@@ -65,8 +91,8 @@ ActiveRecord::Schema.define(version: 20180328173657) do
     t.integer  "nights"
     t.decimal  "amount"
     t.text     "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -78,6 +104,14 @@ ActiveRecord::Schema.define(version: 20180328173657) do
     t.string   "Day5"
     t.string   "Day6"
     t.string   "Day7"
+    t.string   "image_1_file_name"
+    t.string   "image_1_content_type"
+    t.integer  "image_1_file_size"
+    t.datetime "image_1_updated_at"
+    t.string   "image_2_file_name"
+    t.string   "image_2_content_type"
+    t.integer  "image_2_file_size"
+    t.datetime "image_2_updated_at"
   end
 
   create_table "services", force: :cascade do |t|
@@ -107,6 +141,9 @@ ActiveRecord::Schema.define(version: 20180328173657) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "provider"
+    t.string   "uid"
+    t.text     "image"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

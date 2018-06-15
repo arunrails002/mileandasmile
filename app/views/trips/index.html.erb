@@ -1,4 +1,12 @@
 <h1>Reviews</h1>
+<% if current_user %>
+<%= current_user.inspect %>
+<% end %>
+<% unless current_user %>
+  <%= link_to "signin with facebook", user_facebook_omniauth_authorize_path %>
+  <% else %>
+  <%= link_to "log out", destroy_user_session_path, method: :delete %>
+<% end %>
 <div class="container">
    <div class="row" style="padding:0px;">
           <div class="col s12 m6 l6 " style="padding:0px;">

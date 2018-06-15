@@ -24,7 +24,30 @@ class BoardingFormsController < ApplicationController
   # POST /boarding_forms
   # POST /boarding_forms.json
   def create
-    @boarding_form = BoardingForm.new(boarding_form_params)
+date = boarding_form_params["traveldate"]
+date_time = DateTime.parse(date).strftime("%m/%d/%Y").to_date
+nights = boarding_form_params["numberofnights"].to_i
+mobile = boarding_form_params["mobile"].to_i
+       hash = {
+        :type_value => boarding_form_params["type_value"],
+        :spot => boarding_form_params["spot"],
+        :services => boarding_form_params["services"],
+        :traveldate => date_time ,
+        :numberofnights => nights,
+        :mobile => mobile,
+        :email => boarding_form_params["email"],
+       }
+       # hash = {
+       #  :type => "dsf",
+       #  :spot => "dffd",
+       #  :services => "uuu",
+       #  :traveldate => 2018-05-07,
+       #  :numberofnights => 5,
+       #  :mobile => 66,
+       #  :email => "kk",
+       # }
+       # abort(hash.inspect)
+    @boarding_form = BoardingForm.create(hash)
 
     respond_to do |format|
       if @boarding_form.save
